@@ -3,9 +3,9 @@ class Employee
 {
   int empNo;
   String name;
-  String phoneNumber;
+  long phoneNumber;
 
-  public Employee(int empNo, String name, String phoneNumber) 
+  public Employee(int empNo, String name, long phoneNumber) 
   {
     this.empNo = empNo;
     this.name = name;
@@ -13,7 +13,7 @@ class Employee
   }
 }
 
-public class Main 
+public class test 
 {
   public static void main(String args[]) 
   {
@@ -23,17 +23,17 @@ public class Main
 
     for (int i = 0; i < 5; i++) 
     {
-      System.out.print("Enter employee number: ");
-      int empNo = sc.nextInt();
+	  System.out.print("Enter employee number: ");
+	  int empNo = Integer.parseInt(sc.nextLine());  
 
-      System.out.print("Enter employee name: ");
-      String name = sc.nextLine();
+	  System.out.print("Enter employee name: ");
+	  String name = sc.nextLine();
 
-      System.out.print("Enter employee phone number: ");
-      String phoneNumber = sc.nextLine();
+    System.out.print("Enter employee phone number: ");
+    long phoneNumber = Long.parseLong(sc.nextLine());
 
-      employees[i] = new Employee(empNo, name, phoneNumber);
-    }
+    employees[i] = new Employee(empNo, name, phoneNumber);
+   }
 
     for (int i = 0; i < 5; i++) 
     {
